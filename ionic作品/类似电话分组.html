@@ -1,0 +1,69 @@
+<html ng-app="contactsApp">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+
+    <title></title>
+    <style>
+        .button.button-icon.input-button{
+            position:absolute;
+            right:0;
+            top:5px;
+            color:#bbb;
+        }
+        .item img{
+            height:60px;
+            width:60px;
+            float:left;
+            margin-top:20px;
+            margin-right:10px;
+        }
+        .my-item.item{
+            padding-top:0;
+            padding-bottom:0;
+        }
+        .full-width{
+            width:100%
+        }
+    </style>
+    <link href="lib/css/ionic.css" rel="stylesheet">
+    <script src="lib/js/ionic.bundle.js"></script>
+    <script src="js/app1.js"></script>
+
+</head>
+
+<body ng-controller="MainCtrl">
+<ion-header-bar class="bar-positive">
+    <h1 class="title">3000 Contacts</h1>
+    <div class="button" ng-click="scrollBottom()">
+        Scroll Bottom
+    </div>
+</ion-header-bar>
+<ion-header-bar class="bar-light bar-subheader">
+    <input type="search"
+           placeholder="Filter contacts..."
+           ng-model="search"
+           ng-focus="searchFocused = true"
+           ng-blur="searchFocused = false"
+           ng-change="scrollTop()"
+           class="full-width">
+    <button ng-if="search.length"
+            class="button button-icon ion-android-close input-button"
+            ng-click="clearSearch()">
+    </button>
+</ion-header-bar>
+<ion-content>
+    <ion-list>
+        <ion-item class="my-item"
+                  ng-repeat="item in getContacts()"
+                  item-height="getItemHeight(item)"
+                  id="{{ item.isLetter ? (item.letter + '_divider') : ''}}"
+                  ng-style="{'line-height': getItemHeight(item) + 'px'}"
+                  ng-class="{'item-divider': item.isLetter}">
+            <img ng-if="!item.isLetter" ng-src="http://placekitten.com/60/{{55 + ($index % 10)}}">
+            {{item.letter || (item.first_name+' '+item.last_name)}}
+        </ion-item>
+    </ion-list>
+</ion-content>
+</body>
+</html>
