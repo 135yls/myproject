@@ -1,0 +1,37 @@
+/*首页*/
+/*图片放大*/
+.home-content .col{
+    text-align:center;
+    font-size:18px;
+}
+
+.col-2{
+    height:80px;
+}
+.row-1,.row-2,.row-3{height:80px;margin:5px 0px;}
+.col-2 img{
+    width:30%;
+    border-bottom:1px solid #fff;
+}
+.col-2 .home1{
+    margin-bottom:18px;
+}
+/*热点*/
+.bar .mylive-button-bar .button{
+    color:#000;
+}
+.ion-scroll{
+    width:100%;
+    overflow-x:hidden !important;
+}
+.mylive-button-bar{
+    /*头副标题使得字体不会拥挤在一起*/
+    width:600px;
+}
+.mylive-button-bar .select-button{
+    border-bottom-color:blue;
+    border-bottom-width: 4px;
+}
+/*社区*/
+
+/*我的*/

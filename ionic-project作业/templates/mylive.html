@@ -1,0 +1,90 @@
+<ion-view view-title="我的生活">
+    <ion-content>
+            <div class="home-content">
+                <div class="row row-1">
+                    <!--//col使得两边有空隙 light图标变成白色-->
+                    <div class="col col-25">
+                        <div class="col-2">
+                            <img src="img/220220/cloth.jpg" alt="">
+                            <div class="home1">衣</div>
+                        </div>
+                    </div>
+                    <div class="col col-25">
+                        <div class="col-2">
+                            <img src="img/220220/dinner.jpg" alt="">
+                            <div class="home1">食</div>
+                        </div>
+                    </div>
+                    <div class="col col-25">
+                        <div class="col-2">
+                            <img src="img/220220/house.jpg" alt="">
+                            <div class="home1">住</div>
+                        </div>
+                    </div>
+                    <div class="col col-25">
+                        <div class="col-2">
+                            <img src="img/220220/walk.jpg" alt="">
+                            <div class="home1">行</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row row-2">
+                    <!--col使得两边有空隙 light图标变成白色-->
+                    <div class="col col-25">
+                        <div class="col-2">
+                            <img src="img/220220/sport.jpg" alt="">
+                            <div >健身</div>
+                        </div>
+                    </div>
+                    <div class="col col-25">
+                        <div class="col-2">
+                            <img src="img/220220/game.jpg" alt="">
+                            <div >游戏</div>
+                        </div>
+                    </div>
+                    <div class="col col-25">
+                        <div class="col-2">
+                            <img src="img/220220/tv.jpg" alt="">
+                            <div >娱乐</div>
+                        </div>
+                    </div>
+                    <div class="col col-25">
+                        <div class="col-2">
+                            <img src="img/220220/tea.jpg" alt="">
+                            <div >休闲</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row row-3">
+                    <!--col使得两边有空隙 light图标变成白色-->
+                    <div class="col col-25">
+                        <div class="col-2">
+                            <img src="img/220220/shopping.jpg" alt="">
+                            <div >购物</div>
+                        </div>
+                    </div>
+                    <div class="col col-25">
+                        <div class="col-2">
+                            <img src="img/220220/party.jpg" alt="">
+                            <div >聚会</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <!--<ion-content class="has-subheader">-->
+            <!--22  内容列表缩略图-->
+            <ion-list>
+                <ion-item class="item-thumbnail-left" ng-repeat="mylive in myliveData">
+                    <img ng-if="mylive.pic" ng-src="{{ imgUrl }}{{ mylive.pic }}" alt="">
+                    <img ng-if="!mylive.pic" ng-src="img/logo/kfc.jpg" alt="">
+                    <h2>{{ mylive.title }}</h2>
+                </ion-item>
+            </ion-list>
+        <!--</ion-content>-->
+    </ion-content>
+
+
+
+</ion-view>
